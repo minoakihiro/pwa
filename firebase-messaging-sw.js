@@ -3,14 +3,14 @@
 //importScripts("/__/firebase/init.js");
 
 
-importScripts("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/5.7.2/firebase-messaging.js");
+//importScripts("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js");
+//importScripts("https://www.gstatic.com/firebasejs/5.7.2/firebase-messaging.js");
 
-var messaging = firebase.messaging();
+//var messaging = firebase.messaging();
 
-firebase.initializeApp({
-  messagingSenderId: "686960544958"
-});
+//firebase.initializeApp({
+//  messagingSenderId: "686960544958"
+//});
 
 self.addEventListener("push", function(event) {
   //送られたプッシュ通知の本文を表示
@@ -42,3 +42,10 @@ self.addEventListener('activate', function(e) {
 
 // 現状では、この処理を書かないとService Workerが有効と判定されないようです
 self.addEventListener('fetch', function(event) {});
+
+self.addEventListener("notificationclick", function(event) {
+  event.notification.close();
+  event.waitUntil(
+    clients.openWindow("https://minoakihiro.github.io/pwa/p.html")
+  );
+});
