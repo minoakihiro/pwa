@@ -11,7 +11,7 @@
   <script>
     // service workerが有効なら、service-worker.js を登録します
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./firebase-messaging-sw.js').then(function() {
+      navigator.serviceWorker.register('./serviceworker.js').then(function() {
        console.log('Service Worker Registered'); 
       });
     }
@@ -68,7 +68,7 @@
         }
       }).catch(function(err) {
         console.log('An error occurred while retrieving token. ', err);
-        showToken('Error retrieving Instance ID token. ', err);
+        //showToken('Error retrieving Instance ID token. ', err);
         setTokenSentToServer(false);
       });
     }
@@ -89,7 +89,7 @@
   </style>
 </head>
 <body>
-  <h1>Hello PWA9.</h1>
+  <h1>Hello PWA.</h1>
   <input type="button" onclick="requestPermission() ;" value="許可する">
   <img src="./pwa-logo.svg" alt="PWA logo" class="image" />
   <a href="p.html">p.html</a>

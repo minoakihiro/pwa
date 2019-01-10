@@ -10,6 +10,7 @@ self.addEventListener('activate', function(e) {
 // 現状では、この処理を書かないとService Workerが有効と判定されないようです
 self.addEventListener('fetch', function(event) {});
 
+/*
 self.addEventListener("push", function(event) {
   console.log("Push Notification Recieved", event);
   if (Notification.permission == "granted") {
@@ -35,3 +36,4 @@ self.addEventListener("notificationclick", function(event) {
     clients.openWindow("https://minoakihiro.github.io/pwa/p.html")
   );
 });
+*/
