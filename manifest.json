@@ -1,0 +1,12 @@
+{
+  "lang": "ja",
+  "name": "Manekineko",
+  "short_name": "manekicat",
+  "icons": [{
+        "src": "iconV2.png",
+        "sizes": "61x60",
+        "type": "image/png"
+      }],
+  "start_url": "https://watanabe0601.github.io/sw.github.io/index.html",
+  "display": "standalone"
+}
