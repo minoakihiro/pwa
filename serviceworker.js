@@ -1,14 +1,14 @@
-//ƒLƒƒƒbƒVƒ…–¼i¡‰ñ‚Ímanekineko ‚Æ‚¢‚¤ŒÅ—L‚Ì–¼‘Oj
+//ã‚­ãƒ£ãƒƒã‚·ãƒ¥åï¼ˆä»Šå›ã¯manekineko ã¨ã„ã†å›ºæœ‰ã®åå‰ï¼‰
 var cacheName = 'manekineko';
 
-//ƒLƒƒƒbƒVƒ…‚µ‚½‚¢ƒtƒ@ƒCƒ‹‚ÌƒŠƒXƒg(¡‰ñ‚Í3í—ŞBHTML–{‘ÌAjsƒtƒ@ƒCƒ‹ACSSƒtƒ@ƒCƒ‹‚ª‘ÎÛ)
+//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ãŸã„ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒªã‚¹ãƒˆ(ä»Šå›ã¯3ç¨®é¡ã€‚HTMLæœ¬ä½“ã€jsãƒ•ã‚¡ã‚¤ãƒ«ã€CSSãƒ•ã‚¡ã‚¤ãƒ«ãŒå¯¾è±¡)
 var filesToCache = [
    'index.html',
    'jquery.js',
    'style.css',
 ];
 
-//ƒuƒ‰ƒEƒU‚Ö‚ÌƒCƒ“ƒXƒg[ƒ‹‚ÉƒLƒƒƒVƒ…‚µ‚½‚¢ƒtƒ@ƒCƒ‹‚ğ’Ç‰Á‚·‚é
+//ãƒ–ãƒ©ã‚¦ã‚¶ã¸ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ™‚ã«ã‚­ãƒ£ã‚·ãƒ¥ã—ãŸã„ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¿½åŠ ã™ã‚‹
 self.addEventListener('install',function(event){
   event.waitUntil(
     caches.open(cacheName).then(function(cache){
@@ -18,7 +18,7 @@ self.addEventListener('install',function(event){
 });
 
 
-//ServiceWorker‚ª—LŒø‚É‚È‚é‚Æ‚«cacheName‚ª‚¿‚ª‚¤ƒLƒƒƒbƒVƒ…‚ğíœ‚·‚é
+//ServiceWorkerãŒæœ‰åŠ¹ã«ãªã‚‹ã¨ãcacheNameãŒã¡ãŒã†ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã‚’å‰Šé™¤ã™ã‚‹
 self.addEventListener('activate',function(event){
   event.waitUntil(
     caches.keys().then(function(keyList){
@@ -33,7 +33,7 @@ self.addEventListener('activate',function(event){
 });
 
 
-//ƒLƒƒƒbƒVƒ…‚ª‚ ‚ê‚ÎŒÄ‚Ño‚µA‚È‚¢ê‡ƒlƒbƒgƒ[ƒN‚©‚çæ‚è‚És‚­
+//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãŒã‚ã‚Œã°å‘¼ã³å‡ºã—ã€ãªã„å ´åˆãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã‹ã‚‰å–ã‚Šã«è¡Œã
 self.addEventListener('fetch',function(event){
   event.respondWith(
     caches.match(event.request).then(function(response){
