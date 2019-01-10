@@ -2,10 +2,11 @@
 //importScripts("/__/firebase/4.10.0/firebase-messaging.js");
 //importScripts("/__/firebase/init.js");
 
-var messaging = firebase.messaging();
 
 importScripts("https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js");
 importScripts("https://www.gstatic.com/firebasejs/5.7.2/firebase-messaging.js");
+
+var messaging = firebase.messaging();
 
 firebase.initializeApp({
   messagingSenderId: "686960544958"
