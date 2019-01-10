@@ -1,6 +1,10 @@
 <!-- index.html -->
 <html>
 <head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="bagelee">
+
   <!-- manifest.jsonを呼び出しています -->
   <link rel="manifest" href="./manifest.json">
   <script>
@@ -9,7 +13,7 @@
       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
    }
   </script>
-  <title>Hello PWA.</title>
+  <title>Hello PWA2.</title>
   <style>
     body {
       text-align:center;
